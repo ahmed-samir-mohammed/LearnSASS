@@ -1,0 +1,28 @@
+@use "../variable" as color;
+
+@mixin setTheme($color) {
+    @debug $color;
+    @if $color == color.$darkColor {
+        background-color: color.$darkColor;
+        color: color.$textColorDark;
+    } @else {
+        background-color: color.$lightColor;
+        color: color.$textColorLight;
+    }
+}
+
+@mixin setBtnWithImgTheme($color) {
+    @debug $color;
+
+    @if $color == color.$darkColor {
+        background-color: color.$darkColor;
+        img {
+            filter: invert(1);
+        }
+    } @else {
+        background-color: color.$lightColor;
+        img {
+            filter: invert(0);
+        }
+    }
+}

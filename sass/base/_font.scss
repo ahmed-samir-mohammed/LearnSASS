@@ -1,0 +1,9 @@
+$fontName: "Cairo" !default;
+$secFontName: "Roboto" !default;
+
+@import url("https://fonts.googleapis.com/css2?family=#{$fontName}:wght@300;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=#{$secFontName}:wght@300;500;900&display=swap");
+
+body {
+    font-family: $fontName, sans-serif;
+}

@@ -1,0 +1,7 @@
+@use "../abstracts/variable" as color;
+@use "../abstracts/mixin/theme" as theme;
+.light {
+    body {
+        @include theme.setTheme(color.$lightColor);
+    }
+}
