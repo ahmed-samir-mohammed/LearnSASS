@@ -4,4 +4,11 @@
     body {
         @include theme.setTheme(color.$lightColor);
     }
+    .navbar {
+        &__content {
+            .nav-link {
+                @include theme.setIconTheme(color.$iconColorLight);
+            }
+        }
+    }
 }

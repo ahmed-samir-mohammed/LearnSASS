@@ -1,7 +1,7 @@
 @use "../variable" as color;
 
 @mixin setTheme($color) {
-    @debug $color;
+    // @debug $color;
     @if $color == color.$darkColor {
         background-color: color.$darkColor;
         color: color.$textColorDark;
@@ -12,7 +12,7 @@
 }
 
 @mixin setBtnWithImgTheme($color) {
-    @debug $color;
+    // @debug $color;
 
     @if $color == color.$darkColor {
         background-color: color.$darkColor;
@@ -23,6 +23,20 @@
         background-color: color.$lightColor;
         img {
             filter: invert(0);
+        }
+    }
+}
+
+@mixin setIconTheme($color) {
+    @if $color == color.$darkColor {
+        color: color.$iconColorDark;
+        &:hover {
+            background-color: rgba(color.$iconColorDark, 8%);
+        }
+    } @else {
+        color: color.$iconColorLight;
+        &:hover {
+            background-color: rgba(color.$iconColorLight, 8%);
         }
     }
 }

@@ -1,0 +1,17 @@
+@function checkValue($value) {
+    @debug "#{$value} From Check Value ";
+    @if type-of($value: number) {
+        @if $value {
+            @return $value;
+        } @else {
+            @return 0;
+        }
+    }
+    // @if type-of($value: string) {
+    //     @if $value {
+    //         @return $value;
+    //     } @else {
+    //         @return none;
+    //     }
+    // }
+}

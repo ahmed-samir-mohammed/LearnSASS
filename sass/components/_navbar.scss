@@ -1,0 +1,40 @@
+@use "../layout/layout" as layout;
+@use "../abstracts/mixin/w&h" as w-h;
+@use "../abstracts/mixin/flex" as flex;
+@use "../abstracts/mixin/borderRadius" as br;
+
+.navbar {
+    padding-block: 0;
+    display: grid;
+    grid-template-columns:
+        layout.$startSide
+        calc(#{layout.$fWidth} - (#{layout.$startSide} + #{layout.$endSide}))
+        layout.$endSide;
+    grid-template-rows: 100%;
+    grid-template-areas: "NavbarStart NavbarCenter NavbarEnd";
+    &-brand {
+        @include w-h.sameW-H($same: 40px);
+        @include flex.flex($align: center, $justify: center);
+        @include br.borderRadius(50%);
+        // border-radius: 50%;
+        background-color: #fff;
+        img {
+            width: 100%;
+        }
+    }
+
+    &-nav {
+        @include flex.flex($direction: row);
+    }
+
+    &__start {
+        padding-inline-start: 1rem;
+    }
+    &__end {
+        padding-inline-end: 1rem;
+    }
+
+    .nav-link {
+        padding-inline: 1rem !important;
+    }
+}

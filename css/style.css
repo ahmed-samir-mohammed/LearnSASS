@@ -1,1 +1,111 @@
-@import"https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;900&display=swap";@import"https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap";body{font-family:"Cairo",sans-serif}.dark body{background-color:#18191a;color:#e4e6eb}.light body{background-color:#f0f2f5;color:#050505}.toggel__theme{position:fixed;right:0;top:20vh}.toggel__theme--btn{border:0;padding:.5rem;border-radius:.5rem 0 0 .5rem}.dark .toggel__theme--btn{background-color:#f0f2f5}.dark .toggel__theme--btn img{filter:invert(0)}.light .toggel__theme--btn{background-color:#18191a}.light .toggel__theme--btn img{filter:invert(1)}/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+.navbar {
+  grid-area: Navbar;
+}
+
+.end__side {
+  grid-area: EndSide;
+  padding: 1rem;
+}
+
+.start__side {
+  grid-area: StartSide;
+  padding: 1rem;
+}
+
+.content {
+  grid-area: Content;
+  padding: 1rem;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 30vw calc(100vw - (30vw + 30vw)) 30vw;
+  grid-template-rows: 6vh calc(100vh - 6vh);
+  grid-template-areas: "Navbar Navbar Navbar" "StartSide Content EndSide";
+}
+
+.dark body {
+  background-color: #18191a;
+  color: #e4e6eb;
+}
+.dark .navbar__content .nav-link {
+  color: #65676b;
+}
+.dark .navbar__content .nav-link:hover {
+  background-color: rgba(101, 103, 107, 0.08);
+}
+
+.light body {
+  background-color: #f0f2f5;
+  color: #050505;
+}
+.light .navbar__content .nav-link {
+  color: #65676b;
+}
+.light .navbar__content .nav-link:hover {
+  background-color: rgba(101, 103, 107, 0.08);
+}
+
+.toggel__theme {
+  position: fixed;
+  right: 0;
+  top: 20vh;
+}
+.toggel__theme--btn {
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.dark .toggel__theme--btn {
+  background-color: #f0f2f5;
+}
+.dark .toggel__theme--btn img {
+  filter: invert(0);
+}
+.light .toggel__theme--btn {
+  background-color: #18191a;
+}
+.light .toggel__theme--btn img {
+  filter: invert(1);
+}
+
+.navbar {
+  padding-block: 0;
+  display: grid;
+  grid-template-columns: 30vw calc(100vw - (30vw + 30vw)) 30vw;
+  grid-template-rows: 100%;
+  grid-template-areas: "NavbarStart NavbarCenter NavbarEnd";
+}
+.navbar-brand {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.navbar-brand img {
+  width: 100%;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+.navbar__start {
+  padding-inline-start: 1rem;
+}
+.navbar__end {
+  padding-inline-end: 1rem;
+}
+.navbar .nav-link {
+  padding-inline: 1rem !important;
+}
+
+/*# sourceMappingURL=style.css.map */

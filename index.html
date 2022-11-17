@@ -5,6 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"
+        />
+
+        <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
         />
@@ -22,8 +27,87 @@
                 />
             </button>
         </div>
-        <p>Navbar</p>
-        <h1>Hamada</h1>
+        <div id="app">
+            <nav class="navbar navbar-expand-lg">
+                <div class="d-flex navbar__start">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.png" alt="Logo" />
+                    </a>
+                    <form class="d-flex" role="search">
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                    </form>
+                </div>
+                <ul class="navbar-nav navbar__content mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            ><i class="fas fa-house-chimney"></i
+                        ></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-video"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-shop"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-people-group"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar__end ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"
+                            >Home</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Another action</a
+                                >
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    >Something else here</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <div class="content__page"> -->
+            <div class="start__side layout__start">Start Side</div>
+            <div class="content layout__content">Content</div>
+            <div class="end__side layout__end">End Side</div>
+            <!-- </div> -->
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="./js/app.js"></script>

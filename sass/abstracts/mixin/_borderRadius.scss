@@ -1,0 +1,14 @@
+@use "../function/checkValue" as check;
+
+@function calcInnerBR($outer, $padding) {
+    $innerBR: $outer - $padding;
+    @return $innerBR;
+}
+
+@mixin borderRadius($val: null) {
+    border-radius: check.checkValue($val);
+}
+
+@mixin innerBorderRadius($outer, $padding) {
+    border-radius: calcInnerBR($outer, $padding);
+}

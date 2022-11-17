@@ -1,5 +1,6 @@
 @use "../base/font";
 
-// .navbar {
-//     @include setFont();
-// }
+.navbar {
+    // @include setFont();
+    grid-area: Navbar;
+}

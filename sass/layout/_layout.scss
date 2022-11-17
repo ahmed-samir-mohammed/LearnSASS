@@ -1,3 +1,25 @@
 @use "./navbar";
 @use "./endSide";
 @use "./startSide";
+@use "./content";
+
+// Layout Variables
+$fWidth: 100vw;
+$fHeight: 100vh;
+$navbar: 6vh;
+$contentPage: calc(#{$fHeight} - #{$navbar});
+$startSide: 30vw;
+$endSide: 30vw;
+// $content: calc($fWidth - (#{startSide} + #{$endSide}));
+
+#app {
+    display: grid;
+    grid-template-columns:
+        $startSide
+        calc(#{$fWidth} - (#{$startSide} + #{$endSide}))
+        $endSide;
+    grid-template-rows: $navbar $contentPage;
+    grid-template-areas:
+        "Navbar Navbar Navbar"
+        "StartSide Content EndSide";
+}

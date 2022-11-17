@@ -1,3 +1,11 @@
 @mixin setFont() {
     font-family: $secFontName, sans-serif;
 }
+
+// @function calc($nums) {
+//     @return calc($nums);
+// }
+
+// @mixin _fontSize($size) {
+//     font-size: calc($size);
+// }

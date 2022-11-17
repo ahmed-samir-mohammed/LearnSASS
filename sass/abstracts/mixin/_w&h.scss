@@ -1,0 +1,8 @@
+@mixin sameW-H($same: null, $w: null, $h: null) {
+    @if $same != null (and $w and $h) == null {
+        width: $same;
+        height: $same;
+    }
+    width: $w;
+    height: $h;
+}
